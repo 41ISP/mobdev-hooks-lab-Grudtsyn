@@ -1,12 +1,9 @@
-const Input = () => {
+const Input = ({setTitleField}) => {
     return(
-    <div className="add-book-row">
-      <input className="input" id="bookInput" placeholder="Название книги..." />
-      <button className="btn" id="addBtn">
-        Добавить на полку
-      </button>
-    </div>
+      <input onChange={(e)=>setTitleField(e.target.value)} className="input" id="bookInput" placeholder="Название книги..." />
     )
 }
+  
+
 
 export default Input;

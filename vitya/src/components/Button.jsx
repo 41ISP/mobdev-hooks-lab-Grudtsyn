@@ -1,13 +1,10 @@
 const Button = () => {
     return(
-        <button
-          className="delete-btn"
-          data-role="delete"
-          title="Убрать с полки"
-        >
-          ✕
-        </button>
-    )
+    <button className="btn" id="addBtn">
+        Добавить на полку
+      </button>)
 }
+
+
 
 export default Button;
