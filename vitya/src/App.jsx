@@ -3,7 +3,6 @@ import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import ShelfScreen from './pages/ShelfScreen'
-//import './App.css'
 
 function App() {
   const [books, setBooks] = useState([])

@@ -10,7 +10,7 @@ const BookForm = ({books, setBooks}) => {
     const handleOnAdd = (e) => {
         e.preventDefault()
 
-        if (titleField.trim() === 0) return
+        if (titleField.trim().length === 0) return
 
         const newBook = {
           id:nanoid(),

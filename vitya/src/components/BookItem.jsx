@@ -12,13 +12,13 @@ const BookItem = ({id, title, author, read, setBooks}) => {
     }
     return(  <div className="book-row" data-id={id}>
     <div className="book-cover" style={{ background: "#4f6b52" }}>
-      К
+      {title[0]}
     </div>
     <div className="book-info">
-      <p className="book-title done">{title}</p>
+      <p className={`book-title ${ read ? "done" : ""}`}>{title}</p>
       <div className="book-author">{author}</div>
     </div>
-    <div onClick={() => handleOnToggleRead(!read)} className={`task-check${ read ? " checked" : ""}`} data-role="toggle">
+    <div onClick={() => handleOnToggleRead(!read)} className={`read-check${ read ? " checked" : ""}`} data-role="toggle">
       <span className="check-circle">✓</span>
       <span className="read-label">{read ? "Прочитано" : "Непрочитано"}</span>
     </div>
