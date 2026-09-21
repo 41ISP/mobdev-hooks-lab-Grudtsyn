@@ -1,7 +1,7 @@
 import BookItem from "./BookItem/BookItem";
 import './BookList.css'
 
-const BookList = ({books, setBooks, showOnlyUnread}) => {
+const BookList = ({setBooks, showOnlyUnread}) => {
     
     return(
     <div className="book-list" id="bookList">

@@ -1,14 +1,14 @@
 import './FilterChip.css'
 
-const FilterChip = () => {
-    return(
-    <div className="filter-chip">
-        <input type="checkbox" id="filterCheckbox" />
-        <label htmlFor="filterCheckbox">
-          <span className="dot" />
-          Только непрочитанные
-        </label>
-    </div>
+const FilterChip = ({ setShownCompleted, shownCompleted }) => {
+    return (
+        <div className={`filter-chip${shownCompleted ? " checked" : ""}`}>
+            <input onChange={() => setShownCompleted(o => !o)} checked={shownCompleted} type="checkbox" id="filterCheckbox" />
+            <label htmlFor="filterCheckbox">
+                <span className="dot" />
+                Только непрочитанные
+            </label>
+        </div>
     )
 }
 

@@ -21,9 +21,9 @@ const ShelfScreen = ({books, setBooks, showOnlyUnread, setShowOnlyUnread}) => {
     <BookForm books={books} setBooks={setBooks}/>
     <div className="list-toolbar">
       <span className="toolbar-title">Книги</span>
-      <FilterChip onClick={() => setShownCompleted(o => !o)}/>
+      <FilterChip setShownCompleted={setShownCompleted} shownCompleted={shownCompleted}/>
     </div>
-    <BookList books={books} setBooks={setBooks} showOnlyUnread={showOnlyUnread}/>
+    <BookList setBooks={setBooks} showOnlyUnread={showOnlyUnread}/>
   </section>
     
 )}
