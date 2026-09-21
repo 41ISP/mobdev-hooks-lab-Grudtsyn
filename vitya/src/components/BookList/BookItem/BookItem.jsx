@@ -1,3 +1,6 @@
+import './BookItem.css';
+import Checkbox from './Checkbox/Checkbox';
+
 const BookItem = ({id, title, author, read, setBooks}) => {
     
     const handleOnDelete = () => {
@@ -18,10 +21,7 @@ const BookItem = ({id, title, author, read, setBooks}) => {
       <p className={`book-title ${ read ? "done" : ""}`}>{title}</p>
       <div className="book-author">{author}</div>
     </div>
-    <div onClick={() => handleOnToggleRead(!read)} className={`read-check${ read ? " checked" : ""}`} data-role="toggle">
-      <span className="check-circle">✓</span>
-      <span className="read-label">{read ? "Прочитано" : "Непрочитано"}</span>
-    </div>
+    <Checkbox read={read} handleOnToggleRead={handleOnToggleRead}/>
     <button onClick={handleOnDelete} className="delete-btn" data-role="delete" title="Убрать с полки">
       ✕
     </button>

@@ -1,0 +1,48 @@
+:root{
+                --ink: #1c1712;
+                --surface: #241d17;
+                --surface-2: #2c231c;
+                --line: #3a3026;
+                --paper: #ece4d3;
+                --muted: #a89a84;
+                --muted-dim: #6f6353;
+                --gold: #c9a227;
+                --gold-dim: rgba(201, 162, 39, 0.14);
+                --wine: #8a3a3a;
+
+                --font-display: 'Lora', Georgia, serif;
+                --font-body: 'Inter', system-ui, sans-serif;
+                --font-mono: 'IBM Plex Mono', monospace;
+
+                --radius: 12px;
+            }
+.read-check {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.check-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1.5px solid var(--muted-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: transparent;
+}
+
+.read-check.checked .check-circle {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: #1c1712;
+}
+
+.read-label {
+    font-size: 11.5px;
+    color: var(--muted-dim);
+}

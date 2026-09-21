@@ -1,3 +1,5 @@
+import './FilterChip.css'
+
 const FilterChip = () => {
     return(
     <div className="filter-chip">

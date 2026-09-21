@@ -1,8 +1,9 @@
-import Checkbox from "./Checkbox";
-import Button from "./Button";
-import Input from "./Input";
+import Checkbox from "../BookList/BookItem/Checkbox/Checkbox";
+import Button from "./Button/Button";
+import Input from "./Input/Input";
 import { useState } from "react";
 import { nanoid } from "nanoid";
+import './BookForm.css';
 
 const BookForm = ({books, setBooks}) => {
     const [titleField, setTitleField] = useState('')
@@ -25,7 +26,7 @@ const BookForm = ({books, setBooks}) => {
 
     return(
     <form onSubmit={handleOnAdd} className="add-book-row">
-    <Input titleField={titleField} setTitleField={setTitleField}/>
+    <Input titleField={titleField} setTitleField={setTitleField} onChange={(e) => setTitleField(e.target.value)}/>
     <Button/>
     </form>
 )
