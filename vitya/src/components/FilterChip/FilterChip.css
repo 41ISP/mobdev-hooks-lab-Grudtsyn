@@ -1,0 +1,58 @@
+:root{
+                --ink: #1c1712;
+                --surface: #241d17;
+                --surface-2: #2c231c;
+                --line: #3a3026;
+                --paper: #ece4d3;
+                --muted: #a89a84;
+                --muted-dim: #6f6353;
+                --gold: #c9a227;
+                --gold-dim: rgba(201, 162, 39, 0.14);
+                --wine: #8a3a3a;
+
+                --font-display: 'Lora', Georgia, serif;
+                --font-body: 'Inter', system-ui, sans-serif;
+                --font-mono: 'IBM Plex Mono', monospace;
+
+                --radius: 12px;
+            }
+.filter-chip {
+    position: relative;
+}
+
+.filter-chip input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.filter-chip label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--muted);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 6px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.filter-chip input:checked + label {
+    background: var(--gold-dim);
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.filter-chip .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--muted-dim);
+}
+.filter-chip input:checked + label .dot {
+    background: var(--gold);
+}
